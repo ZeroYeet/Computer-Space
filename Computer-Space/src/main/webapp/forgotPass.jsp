@@ -5,7 +5,7 @@
 <html class="dark" lang="vi"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Đăng nhập | ComputerSpace</title>
+<title>Quên mật khẩu | ComputerSpace</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
@@ -109,41 +109,28 @@
 <main class="relative z-10 w-full max-w-[440px] px-6">
 <div class="text-center mb-10">
 <a class="font-headline text-3xl font-black italic text-kinetic-gradient tracking-tighter mb-2" href=index.jsp>Computer Space</a>
-<p class="font-label text-xs uppercase tracking-[0.2em] text-on-surface-variant">Đăng nhập</p>
+<p class="font-label text-xs uppercase tracking-[0.2em] text-on-surface-variant">Quên mật khẩu</p>
 </div>
 <!-- Form Card -->
 <div class="bg-surface-bright/40 backdrop-blur-2xl p-8 rounded-lg shadow-2xl shadow-cyan-900/20 border border-white/5">
 <form class="space-y-6">
 <!-- Email Input -->
 <div class="space-y-1.5">
-<label class="font-label text-[10px] font-bold uppercase tracking-widest text-primary/80 block" for="username">Tên đăng nhập</label>
+<label class="font-label text-[10px] font-bold uppercase tracking-widest text-primary/80 block" for="username">Nhập Email của tài khoản của bạn</label>
 <div class="relative group">
-<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-sm">person</span>
-<input class="w-full bg-surface-container-lowest border-none text-on-surface text-sm p-3 pl-10 focus:ring-1 focus:ring-primary-fixed-dim transition-all outline-none rounded-DEFAULT" id="email" placeholder="tên đăng nhập..." type="text"/>
-</div>
-</div>
-<!-- Password Input -->
-<div class="space-y-1.5">
-<div class="flex justify-between items-center">
-<label class="font-label text-[10px] font-bold uppercase tracking-widest text-primary/80 block" for="password">Mật khẩu</label>
-<a class="text-[10px] font-bold uppercase tracking-widest text-outline hover:text-primary transition-colors" href=forgotPass.jsp>Quên mật khẩu</a>
-</div>
-<div class="relative group">
-<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-sm">lock</span>
-<input class="w-full bg-surface-container-lowest border-none text-on-surface text-sm p-3 pl-10 focus:ring-1 focus:ring-primary-fixed-dim transition-all outline-none rounded-DEFAULT" id="password" placeholder="Mật khẩu..." type="password"/>
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-sm">email</span>
+<input class="w-full bg-surface-container-lowest border-none text-on-surface text-sm p-3 pl-10 focus:ring-1 focus:ring-primary-fixed-dim transition-all outline-none rounded-DEFAULT" id="email" placeholder="email..." type="email"/>
 </div>
 </div>
 <!-- Submit Button -->
 <button class="w-full kinetic-gradient text-on-primary font-headline font-bold py-3 uppercase tracking-widest text-sm hover:brightness-110 active:scale-[0.98] transition-all flex items-center justify-center gap-2 group" type="submit">
-<span>Đăng nhập</span>
+<span>Khôi phục</span>
 <span class="material-symbols-outlined text-lg group-hover:translate-x-1 transition-transform">bolt</span>
 </button>
 </form>
 <!-- Secondary Actions -->
 <div class="mt-8 pt-6 border-t border-white/5 text-center">
-<p class="text-on-surface-variant text-xs">
-                    Chưa có tài khoản? 
-                    <a class="text-primary font-bold hover:underline ml-1" href=signUp.jsp>Đăng ký ngay</a>
+<a class="text-on-surface-variant underline text" href=login.jsp>Quay lại</a>
 </p>
 </div>
 </div>

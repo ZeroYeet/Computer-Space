@@ -4,12 +4,11 @@
 <html class="dark" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>ComputerSpace | Tên sản phẩm</title>
+<title>tên sản phẩm | ComputerSpace</title>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-
 <script id="tailwind-config">
       tailwind.config = {
         darkMode: "class",
@@ -170,17 +169,20 @@
 </button>
 <div class="dropdown-content hidden absolute left-0 top-full pt-2 w-48 z-50">
 <div class="bg-[#171f33] border border-outline-variant/30 shadow-2xl rounded-sm overflow-hidden py-2">
-<a class="block px-4 py-2 text-xs text-slate-400 hover:text-[#00d4ff] hover:bg-[#0b1326]/50 transition-colors" href="#">CPU</a>
-<a class="block px-4 py-2 text-xs text-slate-400 hover:text-[#00d4ff] hover:bg-[#0b1326]/50 transition-colors" href="#">VGA</a>
-<a class="block px-4 py-2 text-xs text-slate-400 hover:text-[#00d4ff] hover:bg-[#0b1326]/50 transition-colors" href="#">RAM</a>
-<a class="block px-4 py-2 text-xs text-slate-400 hover:text-[#00d4ff] hover:bg-[#0b1326]/50 transition-colors" href="#">Ổ cứng</a>
-<a class="block px-4 py-2 text-xs text-slate-400 hover:text-[#00d4ff] hover:bg-[#0b1326]/50 transition-colors" href="#">Mainboard</a>
-<a class="block px-4 py-2 text-xs text-slate-400 hover:text-[#00d4ff] hover:bg-[#0b1326]/50 transition-colors" href="#">Tản nhiệt</a>
-<a class="block px-4 py-2 text-xs text-slate-400 hover:text-[#00d4ff] hover:bg-[#0b1326]/50 transition-colors" href="#">Nguồn</a>
-<a class="block px-4 py-2 text-xs text-slate-400 hover:text-[#00d4ff] hover:bg-[#0b1326]/50 transition-colors" href="#">Case máy tính</a>
+<a class="block px-4 py-2 text-xs text-slate-400 hover:text-[#00d4ff] hover:bg-[#0b1326]/50 transition-colors" href=productList.jsp>CPU</a>
+<a class="block px-4 py-2 text-xs text-slate-400 hover:text-[#00d4ff] hover:bg-[#0b1326]/50 transition-colors" href=productList.jsp>VGA</a>
+<a class="block px-4 py-2 text-xs text-slate-400 hover:text-[#00d4ff] hover:bg-[#0b1326]/50 transition-colors" href=productList.jsp>RAM</a>
+<a class="block px-4 py-2 text-xs text-slate-400 hover:text-[#00d4ff] hover:bg-[#0b1326]/50 transition-colors" href=productList.jsp>Ổ cứng</a>
+<a class="block px-4 py-2 text-xs text-slate-400 hover:text-[#00d4ff] hover:bg-[#0b1326]/50 transition-colors" href=productList.jsp>Mainboard</a>
+<a class="block px-4 py-2 text-xs text-slate-400 hover:text-[#00d4ff] hover:bg-[#0b1326]/50 transition-colors" href=productList.jsp>Tản nhiệt</a>
+<a class="block px-4 py-2 text-xs text-slate-400 hover:text-[#00d4ff] hover:bg-[#0b1326]/50 transition-colors" href=productList.jsp>Nguồn</a>
+<a class="block px-4 py-2 text-xs text-slate-400 hover:text-[#00d4ff] hover:bg-[#0b1326]/50 transition-colors" href=productList.jsp>Case máy tính</a>
 </div>
 </div>
 </div>
+<!-- nút chỉ xuất hiện khi đăng nhập bằng admin -->
+<a class="text-slate-400 hover:text-white transition-all duration-300" href=dashboard.jsp>Kho hàng</a>
+<!--  -->
 <div class="relative hidden lg:block">
 <input class="bg-[#060e20] border-none text-[10px] tracking-widest font-bold font-label px-4 py-2 w-64 focus:ring-1 focus:ring-[#00d4ff] rounded-sm text-white" placeholder="Tìm kiếm..." type="text"/>
 <span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-slate-500 text-sm">search</span>
@@ -227,7 +229,7 @@
 </div>
 </div>
 </div>
-<a class="relative flex items-center scale-95 active:opacity-80 transition-transform duration-150" href='#'>
+<a class="relative flex items-center scale-95 active:opacity-80 transition-transform duration-150" href=cart.jsp>
 <span class="material-symbols-outlined text-slate-400 hover:text-[#00d4ff] cursor-pointer">shopping_cart</span>
 <span class="absolute -top-2 -right-2 bg-[#00d4ff] text-on-primary text-[8px] font-bold px-1 rounded-full">0</span>
 </a>

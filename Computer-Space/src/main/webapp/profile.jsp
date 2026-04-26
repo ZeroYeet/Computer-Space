@@ -99,14 +99,8 @@
 <!-- Top Navigation -->
 <nav class="fixed top-0 w-full z-50 bg-slate-950/60 backdrop-blur-xl flex justify-between items-center px-8 h-20 w-full bg-gradient-to-b from-slate-900 to-transparent shadow-2xl shadow-cyan-900/10">
 <a class="text-2xl font-black text-cyan-400 italic font-['Space_Grotesk'] tracking-tight uppercase" href=index.jsp>Computer Space</a>
-<div class="hidden md:flex items-center gap-8 font-['Space_Grotesk'] tracking-tight uppercase">
-<!-- nút chỉ xuất hiện khi đăng nhập bằng admin -->
-<a class="text-slate-400 font-medium hover:text-cyan-200 transition-colors" href="#">Kho hàng</a>
-<!--  -->
-<a class="text-cyan-400 border-b-2 border-cyan-400 pb-1" href="#">Tài khoản</a>
-</div>
 <div class="flex items-center gap-6">
-<a class="hover:bg-slate-800/50 transition-all p-2 rounded-lg group" href='#'>
+<a class="hover:bg-slate-800/50 transition-all p-2 rounded-lg group" href=cart.jsp>
 <span class="material-symbols-outlined text-slate-400 group-hover:text-cyan-400">shopping_cart</span>
 </a>
 <button class="hover:bg-slate-800/50 transition-all p-2 rounded-lg group">
@@ -190,6 +184,151 @@
 </div>
 </div>
 </footer>
+<!-- cửa sổ chỉnh sửa thông tin cá nhân -->
+<% /*
+				<div class="fixed inset-0 z-[60] flex items-center justify-center p-4">
+				<div class="absolute inset-0 bg-slate-950/60 backdrop-blur-xl"></div>
+				<div class="relative w-full max-w-2xl bg-surface-container-low border border-cyan-500/30 shadow-[0_0_80px_rgba(0,212,255,0.15)] rounded-lg overflow-hidden flex flex-col md:flex-row">
+				<div class="w-1.5 bg-gradient-to-b from-cyan-400 to-cyan-600"></div>
+				<div class="flex-1 p-8 relative">
+				<div class="absolute top-0 right-0 w-32 h-32 opacity-10 pointer-events-none">
+				</div>
+				<!-- Header -->
+				<header class="mb-10 flex justify-between items-start">
+				<div>
+				<h2 class="text-2xl font-headline font-bold text-on-surface tracking-tighter">Chỉnh sửa thông tin</h2>
+				</div>
+				<button class="text-slate-500 hover:text-cyan-400 transition-colors">
+				<span class="material-symbols-outlined" data-icon="close">close</span>
+				</button>
+				</header>
+				<!-- Form Grid -->
+				<div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6 mb-12">
+				<!-- Field: Display Name -->
+				<div class="space-y-1.5">
+				<label class="text-[10px] text-cyan-500 font-headline font-bold tracking-widest uppercase">Họ tên</label>
+				<div class="relative group">
+				<input class="w-full bg-surface-container-lowest border border-outline-variant/30 text-on-surface font-headline px-4 py-3 text-sm focus:border-primary-fixed-dim focus:ring-1 focus:ring-primary-fixed-dim/20 transition-all outline-none rounded" type="text" value="X-CELLERATOR_99"/>
+				<div class="absolute right-3 top-3 text-cyan-500/20 group-hover:text-cyan-500 transition-colors">
+				<span class="material-symbols-outlined text-[16px]" data-icon="edit">edit</span>
+				</div>
+				</div>
+				</div>
+				<!-- Field: Comms Link -->
+				<div class="space-y-1.5">
+				<label class="text-[10px] text-cyan-500 font-headline font-bold tracking-widest uppercase">Email</label>
+				<div class="relative group">
+				<input class="w-full bg-surface-container-lowest border border-outline-variant/30 text-on-surface font-headline px-4 py-3 text-sm focus:border-primary-fixed-dim focus:ring-1 focus:ring-primary-fixed-dim/20 transition-all outline-none rounded" type="email" value="admin@cobaltcore.io"/>
+				<div class="absolute right-3 top-3 text-cyan-500/20 group-hover:text-cyan-500 transition-colors">
+				<span class="material-symbols-outlined text-[16px]" data-icon="alternate_email">alternate_email</span>
+				</div>
+				</div>
+				</div>
+				<!-- Field: Active Region -->
+				<div class="space-y-1.5">
+				<label class="text-[10px] text-cyan-500 font-headline font-bold tracking-widest uppercase">SĐT</label>
+				<div class="relative group">
+				<input class="w-full bg-surface-container-lowest border border-outline-variant/30 text-on-surface font-headline px-4 py-3 text-sm focus:border-primary-fixed-dim focus:ring-1 focus:ring-primary-fixed-dim/20 transition-all outline-none rounded" type="text" value="+81 (03) 555-CORE"/>
+				<div class="absolute right-3 top-3 text-cyan-500/20 group-hover:text-cyan-500 transition-colors">
+				<span class="material-symbols-outlined text-[16px]" data-icon="call">call</span>
+				</div>
+				</div>
+				</div>
+				<!-- Field: Phone Number -->
+				<div class="space-y-1.5">
+				<label class="text-[10px] text-cyan-500 font-headline font-bold tracking-widest uppercase">Địa chỉ</label>
+				<div class="relative group">
+				<input class="w-full bg-surface-container-lowest border border-outline-variant/30 text-on-surface font-headline px-4 py-3 text-sm focus:border-primary-fixed-dim focus:ring-1 focus:ring-primary-fixed-dim/20 transition-all outline-none rounded" type="text" value="+81 (03) 555-CORE"/>
+				<div class="absolute right-3 top-3 text-cyan-500/20 group-hover:text-cyan-500 transition-colors">
+				<span class="material-symbols-outlined text-[16px]" data-icon="house">house</span>
+				</div>
+				</div>
+				</div>
+				</div>
+				<!-- Footer Actions -->
+				<div class="flex flex-col md:flex-row items-center gap-4 pt-6 border-t border-slate-800/20">
+				<div class="flex gap-4 w-full md:w-auto">
+				<button class="flex-1 md:flex-none px-8 py-3 bg-surface-container border border-outline-variant/30 text-on-surface-variant font-headline text-xs font-bold tracking-widest hover:bg-slate-800/40 transition-colors rounded">
+				                                    Hủy
+				                                </button>
+				<button class="flex-1 md:flex-none px-12 py-3 bg-gradient-to-r from-primary to-primary-container text-on-primary font-headline text-xs font-bold tracking-widest hover:brightness-110 active:scale-95 transition-all rounded shadow-[0_0_30px_rgba(0,212,255,0.4)]">
+				                                    Lưu thông tin
+				                                </button>
+				</div>
+				</div>
+				</div>
+				</div>
+				</div>
+*/%>
+<!-- cửa sổ đổi mật khẩu -->
+<%/*
+				<div class="fixed inset-0 z-[100] flex items-center justify-center bg-slate-950/80 backdrop-blur-xl">
+				<div class="relative w-full max-w-lg mx-4">
+				<!-- Modal Background with asymmetric glow -->
+				<div class="absolute -inset-1 bg-gradient-to-br from-cyan-500/50 via-transparent to-primary/30 blur opacity-30"></div>
+				<div class="relative glass-panel border border-cyan-500/20 overflow-hidden shadow-2xl">
+				<!-- Header Decorative Bar -->
+				<div class="h-1 w-full bg-gradient-to-r from-cyan-600 via-primary-container to-cyan-400"></div>
+				<div class="p-8">
+				<!-- Title Section -->
+				<div class="mb-10">
+				<div class="flex justify-between items-center mb-2">
+				<h2 class="font-headline text-xl font-bold tracking-tight text-white">Đổi mật khẩu</h2>
+				<button class="material-symbols-outlined text-slate-400 hover:text-white transition-colors">close</button>
+				</div>
+				</div>
+				<!-- Form Content -->
+				<form class="space-y-6">
+				<!-- Field: Current Password -->
+				<div class="space-y-2">
+				<label class="flex justify-between text-[10px] font-bold text-cyan-100 tracking-widest uppercase">
+				                                Mật khẩu hiện tại
+				</label>
+				<div class="relative group">
+				<span class="absolute left-4 top-1/2 -translate-y-1/2 material-symbols-outlined text-slate-500 text-sm">lock_open</span>
+				<input class="w-full bg-surface-container-lowest border border-cyan-500/30 pl-12 pr-4 py-4 text-on-surface placeholder:text-slate-700 focus:outline-none focus:border-primary-container focus:ring-1 focus:ring-primary-container neon-glow-cyan transition-all font-mono text-sm" placeholder="••••••••••••" type="password"/>
+				</div>
+				</div>
+				<!-- Divider -->
+				<div class="flex items-center gap-4 py-2">
+				<div class="flex-1 h-[1px] bg-slate-800"></div>
+				<span class="material-symbols-outlined text-slate-600 text-xs">keyboard_double_arrow_down</span>
+				<div class="flex-1 h-[1px] bg-slate-800"></div>
+				</div>
+				<!-- Field: New Password -->
+				<div class="space-y-2">
+				<label class="flex justify-between text-[10px] font-bold text-cyan-100 tracking-widest uppercase">
+				                                Mật khẩu mới
+				</label>
+				<div class="relative">
+				<span class="absolute left-4 top-1/2 -translate-y-1/2 material-symbols-outlined text-slate-500 text-sm">lock</span>
+				<input class="w-full bg-surface-container-lowest border border-cyan-500/30 pl-12 pr-4 py-4 text-on-surface placeholder:text-slate-700 focus:outline-none focus:border-primary-container focus:ring-1 focus:ring-primary-container neon-glow-cyan transition-all font-mono text-sm" placeholder="••••••••••••" type="password"/>
+				</div>
+				</div>
+				<!-- Field: Confirm Password -->
+				<div class="space-y-2">
+				<label class="block text-[10px] font-bold text-cyan-100 tracking-widest uppercase">Nhập lại mật khẩu mới</label>
+				<div class="relative">
+				<span class="absolute left-4 top-1/2 -translate-y-1/2 material-symbols-outlined text-slate-500 text-sm">lock</span>
+				<input class="w-full bg-surface-container-lowest border border-cyan-500/30 pl-12 pr-4 py-4 text-on-surface placeholder:text-slate-700 focus:outline-none focus:border-primary-container focus:ring-1 focus:ring-primary-container neon-glow-cyan transition-all font-mono text-sm" placeholder="••••••••••••" type="password"/>
+				</div>
+				</div>
+				<!-- Action Button -->
+				<div class="pt-6">
+				<button class="group relative w-full overflow-hidden bg-primary-container p-[1px] transition-all hover:scale-[1.01] active:scale-95 shadow-[0_0_20px_rgba(0,212,255,0.4)]">
+				<div class="relative bg-surface-container-lowest py-4 px-8 transition-colors group-hover:bg-transparent">
+				<div class="flex items-center justify-center gap-3">
+				<span class="font-headline text-sm font-bold tracking-[0.3em] text-primary-container group-hover:text-on-primary uppercase transition-colors">Đổi mật khẩu</span>
+				</div>
+				</div>
+				</button>
+				</div>
+				</form>
+				</div>
+				</div>
+				</div>
+				</div>
+*/%>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
  </script>
 </body></html>

@@ -100,14 +100,8 @@
 <!-- TopNavBar Shell -->
 <nav class="fixed top-0 w-full z-50 bg-slate-950/60 backdrop-blur-xl flex justify-between items-center px-8 h-20 w-full bg-gradient-to-b from-slate-900 to-transparent shadow-2xl shadow-cyan-900/10">
 <a class="text-2xl font-black text-cyan-400 italic font-['Space_Grotesk'] tracking-tight uppercase" href=index.jsp>Computer Space</a>
-<div class="hidden md:flex items-center gap-8 font-['Space_Grotesk'] tracking-tight uppercase">
-<!-- nút chỉ xuất hiện khi đăng nhập bằng admin -->
-<a class="text-slate-400 font-medium hover:text-cyan-200 transition-colors" href="#">Kho hàng</a>
-<!--  -->
-<a class="text-cyan-400 border-b-2 border-cyan-400 pb-1" href="#">Tài khoản</a>
-</div>
 <div class="flex items-center gap-6">
-<a class="hover:bg-slate-800/50 transition-all p-2 rounded-lg group" href='#'>
+<a class="hover:bg-slate-800/50 transition-all p-2 rounded-lg group" href=cart.jsp>
 <span class="material-symbols-outlined text-slate-400 group-hover:text-cyan-400">shopping_cart</span>
 </a>
 <button class="hover:bg-slate-800/50 transition-all p-2 rounded-lg group">

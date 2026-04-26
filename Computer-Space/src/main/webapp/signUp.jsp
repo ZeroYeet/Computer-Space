@@ -137,7 +137,7 @@
 <label class="text-[10px] font-headline font-bold tracking-[0.15em] uppercase text-on-surface-variant block">Tên đăng nhập</label>
 <div class="relative">
 <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline text-sm" data-icon="mail">person</span>
-<input class="w-full bg-surface-container-lowest border-none py-4 pl-12 pr-4 text-on-surface placeholder:text-outline/50 focus:ring-1 focus:ring-primary/50 transition-all outline-none rounded-none" placeholder="Tên đăng nhập..." type="username"/>
+<input class="w-full bg-surface-container-lowest border-none py-4 pl-12 pr-4 text-on-surface placeholder:text-outline/50 focus:ring-1 focus:ring-primary/50 transition-all outline-none rounded-none" placeholder="Tên đăng nhập..." type="text"/>
 </div>
 </div>
 <!-- Password Grid -->

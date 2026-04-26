@@ -170,7 +170,7 @@
 </button>
 <div class="dropdown-content hidden absolute left-0 top-full pt-2 w-48 z-50">
 <div class="bg-[#171f33] border border-outline-variant/30 shadow-2xl rounded-sm overflow-hidden py-2">
-<a class="block px-4 py-2 text-xs text-slate-400 hover:text-[#00d4ff] hover:bg-[#0b1326]/50 transition-colors" href="#">CPU</a>
+<a class="block px-4 py-2 text-xs text-slate-400 hover:text-[#00d4ff] hover:bg-[#0b1326]/50 transition-colors" href=productList.jsp>CPU</a>
 <a class="block px-4 py-2 text-xs text-slate-400 hover:text-[#00d4ff] hover:bg-[#0b1326]/50 transition-colors" href="#">VGA</a>
 <a class="block px-4 py-2 text-xs text-slate-400 hover:text-[#00d4ff] hover:bg-[#0b1326]/50 transition-colors" href="#">RAM</a>
 <a class="block px-4 py-2 text-xs text-slate-400 hover:text-[#00d4ff] hover:bg-[#0b1326]/50 transition-colors" href="#">Ổ cứng</a>
@@ -181,6 +181,9 @@
 </div>
 </div>
 </div>
+<!-- nút chỉ xuất hiện khi đăng nhập bằng admin -->
+<a class="text-slate-400 hover:text-white transition-all duration-300" href=dashboard.jsp>Kho hàng</a>
+<!--  -->
 <div class="relative hidden lg:block">
 <input class="bg-[#060e20] border-none text-[10px] tracking-widest font-bold font-label px-4 py-2 w-64 focus:ring-1 focus:ring-[#00d4ff] rounded-sm text-white" placeholder="Tìm kiếm..." type="text"/>
 <span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-slate-500 text-sm">search</span>
@@ -227,7 +230,7 @@
 </div>
 </div>
 </div>
-<a class="relative flex items-center scale-95 active:opacity-80 transition-transform duration-150" href='#'>
+<a class="relative flex items-center scale-95 active:opacity-80 transition-transform duration-150" href=cart.jsp>
 <span class="material-symbols-outlined text-slate-400 hover:text-[#00d4ff] cursor-pointer">shopping_cart</span>
 <span class="absolute -top-2 -right-2 bg-[#00d4ff] text-on-primary text-[8px] font-bold px-1 rounded-full">0</span>
 </a>
