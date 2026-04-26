@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>KINETIC_CORE | High-Performance Precision Computing</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0b1326;
+            color: #dae2fd;
+        }
+        .font-headline { font-family: 'Space Grotesk', sans-serif; }
+        .tonal-transition { transition: background 0.3s ease; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .group:hover .group-hover\:block {
+            display: block;
+        }
+        /* Custom scrollbar for horizontal lists */
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "outline-variant": "#3c494e",
+                      "on-secondary-container": "#a9bad3",
+                      "on-primary-container": "#00586b",
+                      "inverse-primary": "#00677e",
+                      "surface-container": "#171f33",
+                      "on-secondary": "#213145",
+                      "background": "#0b1326",
+                      "surface": "#0b1326",
+                      "on-error-container": "#ffdad6",
+                      "surface-container-high": "#222a3d",
+                      "tertiary-fixed-dim": "#7bd0ff",
+                      "on-primary-fixed-variant": "#004e5f",
+                      "secondary-container": "#3a4a5f",
+                      "primary-fixed-dim": "#3cd7ff",
+                      "surface-container-low": "#131b2e",
+                      "on-primary-fixed": "#001f27",
+                      "primary-container": "#00d4ff",
+                      "on-secondary-fixed": "#0b1c30",
+                      "on-tertiary-fixed-variant": "#004c69",
+                      "surface-variant": "#2d3449",
+                      "on-surface-variant": "#bbc9cf",
+                      "inverse-on-surface": "#283044",
+                      "surface-bright": "#31394d",
+                      "surface-dim": "#0b1326",
+                      "on-tertiary": "#00354a",
+                      "primary": "#a8e8ff",
+                      "error-container": "#93000a",
+                      "secondary-fixed-dim": "#b7c8e1",
+                      "tertiary-fixed": "#c4e7ff",
+                      "surface-container-highest": "#2d3449",
+                      "on-primary": "#003642",
+                      "on-error": "#690005",
+                      "inverse-surface": "#dae2fd",
+                      "on-background": "#dae2fd",
+                      "surface-container-lowest": "#060e20",
+                      "secondary-fixed": "#d3e4fe",
+                      "tertiary-container": "#6fcdff",
+                      "primary-fixed": "#b4ebff",
+                      "secondary": "#b7c8e1",
+                      "on-tertiary-container": "#005676",
+                      "on-surface": "#dae2fd",
+                      "tertiary": "#bbe4ff",
+                      "outline": "#859398",
+                      "on-tertiary-fixed": "#001e2c",
+                      "on-secondary-fixed-variant": "#38485d",
+                      "error": "#ffb4ab",
+                      "surface-tint": "#3cd7ff"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "fontFamily": {
+                      "headline": ["Space Grotesk"],
+                      "body": ["Inter"],
+                      "label": ["Inter"]
+              }
+            },
+          },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-surface">
+<!-- TopNavBar -->
+<header class="sticky top-0 w-full z-50 bg-[#0b1326]/80 backdrop-blur-md shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
+<nav class="flex justify-between items-center w-full px-8 py-4 max-w-[1920px] mx-auto">
+<!-- Brand Logo -->
+<div class="text-2xl font-black text-[#00d4ff] tracking-tighter italic font-headline">
+                KINETIC_CORE
+            </div>
+<!-- Navigation Links -->
+<div class="hidden md:flex items-center space-x-8 font-['Space_Grotesk'] uppercase tracking-widest text-sm font-bold">
+<div class="relative group">
+<button class="flex items-center space-x-1 text-[#00d4ff] transition-all duration-300">
+<span>Products</span>
+<span class="material-symbols-outlined text-sm">keyboard_arrow_down</span>
+</button>
+<div class="absolute top-full left-0 mt-2 w-48 bg-[#171f33] shadow-xl hidden group-hover:block border border-outline-variant/30">
+<div class="flex flex-col py-2">
+<a class="px-4 py-3 text-slate-400 hover:text-white hover:bg-[#171f33]/50 transition-all duration-300" href="#">Processors</a>
+<a class="px-4 py-3 text-slate-400 hover:text-white hover:bg-[#171f33]/50 transition-all duration-300" href="#">Graphics</a>
+<a class="px-4 py-3 text-slate-400 hover:text-white hover:bg-[#171f33]/50 transition-all duration-300" href="#">Memory</a>
+<a class="px-4 py-3 text-slate-400 hover:text-white hover:bg-[#171f33]/50 transition-all duration-300" href="#">Storage</a>
+<a class="px-4 py-3 text-slate-400 hover:text-white hover:bg-[#171f33]/50 transition-all duration-300" href="#">Motherboards</a>
+<a class="px-4 py-3 text-slate-400 hover:text-white hover:bg-[#171f33]/50 transition-all duration-300" href="#">Cooling</a>
+</div>
+</div>
+</div>
+<a class="text-slate-400 hover:text-white transition-all duration-300" href="#">Benchmarks</a>
+<a class="text-slate-400 hover:text-white transition-all duration-300" href="#">Configurator</a>
+</div>
+<!-- Trailing Actions -->
+<div class="flex items-center space-x-6">
+<div class="relative hidden lg:block">
+<input class="bg-[#171f33]/50 border-none text-[10px] tracking-widest px-4 py-2 w-48 focus:ring-1 focus:ring-[#00d4ff] transition-all outline-none text-white font-headline" placeholder="SEARCH SYSTEM..." type="text"/>
+</div>
+<div class="flex items-center space-x-6">
+<!-- User Profile Section (OPERATOR_01) -->
+<div class="hidden sm:flex items-center gap-3 pl-6 border-l border-slate-800">
+<div class="flex flex-col items-end">
+<span class="text-[9px] text-slate-500 font-bold tracking-[0.2em] uppercase">Authenticated</span>
+<span class="text-white font-headline uppercase tracking-widest text-xs font-bold">OPERATOR_01</span>
+</div>
+<div class="w-9 h-9 rounded-sm border border-[#00d4ff]/30 p-0.5 bg-[#171f33]">
+<div class="w-full h-full bg-[#00d4ff]/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-[#00d4ff] text-xl">person</span>
+</div>
+</div>
+</div>
+<button class="text-slate-400 hover:text-[#a8e8ff] transition-all duration-300 p-1 scale-95 active:opacity-80">
+<span class="material-symbols-outlined">shopping_cart</span>
+</button>
+<button class="hidden sm:block bg-[#00d4ff] text-[#003642] px-6 py-2 scale-95 active:opacity-80 transition-transform duration-150 font-headline font-black uppercase text-[10px] tracking-widest">
+                        Build PC
+                    </button>
+</div>
+</div>
+</nav>
+<div class="h-[1px] w-full bg-gradient-to-r from-transparent via-[#00d4ff]/20 to-transparent"></div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative h-[700px] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-40" data-alt="Futuristic 3D render of a high-performance computer processor with glowing cyan energy circuits" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxVTGJyRWChgEzQGEgQH3sDuBr2bfE9kqqyRIaKszDkAqU_oCJSLu7DI0VjSIbBw4bYHAXj5Gd0RV0W2qtx3k42ksMgm0nJ0gJJc8F2lD8r1kIZKDb5Plh2W4nJZGwIF7860ui3xK_2PJvpShzrsVOgOtbJeLRsbXxiQelFDpgRInGPCtT8LSOyWARS6EKJVPNZY15QqgCCf-fh7cJypqMV-F4l35eCkj98cPpYmkycNJg0uS0eSWCGOOJnnfGq6eg7A4pscFhPBoE"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-background via-background/40 to-transparent"></div>
+</div>
+<div class="relative z-10 px-12 max-w-7xl">
+<div class="mb-4 inline-flex items-center space-x-2 bg-primary/10 border border-primary/20 px-3 py-1">
+<span class="w-2 h-2 bg-primary rounded-full animate-pulse"></span>
+<span class="text-[10px] font-bold tracking-[0.2em] text-primary uppercase">System Status: Optimal</span>
+</div>
+<h1 class="font-headline text-7xl lg:text-9xl font-bold tracking-tighter leading-none mb-6">
+                    RAW <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary-container">VELOCITY.</span><br/>
+                    FORGED CORES.
+                </h1>
+<p class="max-w-xl text-on-surface-variant text-lg font-light leading-relaxed mb-8">
+                    Engineered for the elite. Experience the next evolution of computational power.
+                </p>
+<div class="flex space-x-4">
+<button class="bg-gradient-to-r from-primary to-primary-container text-on-primary px-10 py-4 font-headline font-bold tracking-tight text-lg hover:brightness-110 transition-all">
+                        EXPLORE ARCHITECTURE
+                    </button>
+</div>
+</div>
+</section>
+<!-- Horizontal Scrollable Section Factory Function (Conceptual) -->
+<!-- SECTION 1: SẢN PHẨM NỔI BẬT -->
+<section class="py-16 px-8 md:px-12">
+<div class="max-w-[1920px] mx-auto">
+<div class="flex justify-between items-end mb-8 border-l-4 border-primary pl-6">
+<div>
+<h2 class="font-headline text-3xl font-bold tracking-tight uppercase">SẢN PHẨM <span class="text-primary">NỔI BẬT</span></h2>
+<p class="text-on-surface-variant text-xs font-bold tracking-[0.2em] mt-1">FEATURED_SELECTION</p>
+</div>
+<a class="text-xs font-bold tracking-widest text-primary flex items-center group" href="#">SEE ALL <span class="material-symbols-outlined text-sm ml-2 group-hover:translate-x-1 transition-transform">arrow_forward</span></a>
+</div>
+<div class="flex space-x-6 overflow-x-auto hide-scrollbar pb-6 snap-x">
+<!-- Product Item 1 -->
+<div class="flex-none w-[320px] snap-start group bg-surface-container-low border border-outline-variant/20 hover:border-primary/50 transition-all duration-300">
+<div class="h-48 bg-[#060e20] flex items-center justify-center p-6 overflow-hidden">
+<img class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500" data-alt="Product image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRrmSCs6Fdf-qKmcxjGNAanJ8vj2wMGlJ-RTr2t0_Urzhye5EoKgXwcZvlqw7tMS2aFYFaYN0cRw8w4gAQZJnEAMvUTimhSuWDRdma-1qW8iLHfz7YB-pzCaT4quuPROubowP9msb-vjMhWLYXRICcgdxLovznhxNXRMfFotGpskbpYIPESldHypMK3yib3rKimML1h9Xyo1DECLzdEk9Z_3-BhDJTq6d94wVZehIiUpTi31JLN3_5w8__JCuVHpSfQk8TNSqj9S1R"/>
+</div>
+<div class="p-6">
+<span class="text-[10px] font-bold text-primary tracking-widest uppercase">PRECISION_CORE</span>
+<h4 class="font-headline text-lg font-bold mt-1 line-clamp-1">CORE-X 9950X PRO</h4>
+<p class="text-xs text-on-surface-variant mt-2 mb-4">16 Cores / 5.4 GHz / Unlocked</p>
+<div class="flex justify-between items-center mt-auto border-t border-outline-variant/10 pt-4">
+<span class="font-headline text-xl font-bold text-primary">$699.00</span>
+<button class="p-2 bg-primary/10 text-primary hover:bg-primary hover:text-on-primary transition-all">
+<span class="material-symbols-outlined text-sm">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Duplicate items for scroll effect -->
+<div class="flex-none w-[320px] snap-start group bg-surface-container-low border border-outline-variant/20 hover:border-primary/50 transition-all duration-300">
+<div class="h-48 bg-[#060e20] flex items-center justify-center p-6 overflow-hidden">
+<img class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500" data-alt="Product image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfh8_o71ck-VzO_ZLS7SQxk0aOKG8WruzoudiGCMZfeGUwWHeP0q7bZTh44Eq_rkF8y-9VsSBvXWtO7sNJ8yKPi1I9aNqaknUYxVL61mTAKci4d09_uvgLUo_rgXhdDsQMni-z4BqfyR1VkFHFFFYKrdz4bqv9PI7-0swy4a0owAQqh3_OMAXmVe9hGuJmiRgD2jZ1lo-ww8c4DJPHg8572kZoQJrufrrfvaJ9ejw4_KIWW51WfNdLGK-EJqfpI2PrAzkhqC5PwlAe"/>
+</div>
+<div class="p-6">
+<span class="text-[10px] font-bold text-primary tracking-widest uppercase">RENDER_ENGINE</span>
+<h4 class="font-headline text-lg font-bold mt-1 line-clamp-1">NEBULA TITAN OC</h4>
+<p class="text-xs text-on-surface-variant mt-2 mb-4">24GB GDDR6X / Dual BIOS</p>
+<div class="flex justify-between items-center mt-auto border-t border-outline-variant/10 pt-4">
+<span class="font-headline text-xl font-bold text-primary">$1,999.00</span>
+<button class="p-2 bg-primary/10 text-primary hover:bg-primary hover:text-on-primary transition-all">
+<span class="material-symbols-outlined text-sm">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<div class="flex-none w-[320px] snap-start group bg-surface-container-low border border-outline-variant/20 hover:border-primary/50 transition-all duration-300">
+<div class="h-48 bg-[#060e20] flex items-center justify-center p-6 overflow-hidden">
+<img class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500" data-alt="Product image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_x8LLiYrxAASO2jy-AaXX0td1ZIsJ-kXdmD0EtnWekICzYNoaM6jpdDfNMM1r7tn2y9kNMjStnf8-HLHvefk6P_Kwsf5wMFosCh9PdkU2mO3QrTshlrDg8hUH8zHjJK6mL0M65PxEjxb52z_BBcHggtMAQthJx_ZuR0wcso2pE71Jwx5TKZng6HZJRnZTMRsWqVqLu3qMHX6vlzolwDpUcLKgOj2_5rLseQg2GTQ-Hlq3_jAdVVE1ooAoWf1eE5Tl5VHehUI8Vw62"/>
+</div>
+<div class="p-6">
+<span class="text-[10px] font-bold text-primary tracking-widest uppercase">BASE_STATION</span>
+<h4 class="font-headline text-lg font-bold mt-1 line-clamp-1">KINETIC ALPHA-X</h4>
+<p class="text-xs text-on-surface-variant mt-2 mb-4">X870E / WiFi 7 / 20+2 Power</p>
+<div class="flex justify-between items-center mt-auto border-t border-outline-variant/10 pt-4">
+<span class="font-headline text-xl font-bold text-primary">$449.00</span>
+<button class="p-2 bg-primary/10 text-primary hover:bg-primary hover:text-on-primary transition-all">
+<span class="material-symbols-outlined text-sm">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Additional items for filler -->
+<div class="flex-none w-[320px] snap-start group bg-surface-container-low border border-outline-variant/20 hover:border-primary/50 transition-all duration-300">
+<div class="h-48 bg-[#060e20] flex items-center justify-center p-6 overflow-hidden">
+<img class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500" data-alt="Product image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfDFctgEDiLQ0O3X3WcCNyO7nNagn431bn67lqvxhkYgPpzXzSS-Ca0bK2q8hKdwOraxByRPBjRaxzDjZsBkoDH-pvlpKa6WtvXuNHirgSk6vvHyKHZY9ZIbC-AJDu9WrUVI8zppwkxnL7LWzuhtY3zaKgDonPKD-Rnkn95uUFIJemcpoUdURc9ih7gNgH-46lVWVdlxfpY7vhfTrTZMaw_8Oq5Hv9-qKK8z321sql6fUwY0xqQRrKTdu8AG8nCawSgjzXxEF-OkFn"/>
+</div>
+<div class="p-6">
+<span class="text-[10px] font-bold text-primary tracking-widest uppercase">STORAGE_ARRAY</span>
+<h4 class="font-headline text-lg font-bold mt-1 line-clamp-1">HYPERION NVME 4TB</h4>
+<p class="text-xs text-on-surface-variant mt-2 mb-4">7500 MB/s Read / Gen 5</p>
+<div class="flex justify-between items-center mt-auto border-t border-outline-variant/10 pt-4">
+<span class="font-headline text-xl font-bold text-primary">$329.00</span>
+<button class="p-2 bg-primary/10 text-primary hover:bg-primary hover:text-on-primary transition-all">
+<span class="material-symbols-outlined text-sm">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 2: BỘ VI XỬ LÝ - CPU -->
+<section class="py-16 px-8 md:px-12 bg-surface-container-lowest">
+<div class="max-w-[1920px] mx-auto">
+<div class="flex justify-between items-end mb-8 border-l-4 border-[#3cd7ff] pl-6">
+<div>
+<h2 class="font-headline text-3xl font-bold tracking-tight uppercase">BỘ VI XỬ LÝ - <span class="text-[#3cd7ff]">CPU</span></h2>
+<p class="text-on-surface-variant text-xs font-bold tracking-[0.2em] mt-1">COMPUTE_UNITS</p>
+</div>
+<a class="text-xs font-bold tracking-widest text-[#3cd7ff] flex items-center group" href="#">SEE ALL <span class="material-symbols-outlined text-sm ml-2 group-hover:translate-x-1 transition-transform">arrow_forward</span></a>
+</div>
+<div class="flex space-x-6 overflow-x-auto hide-scrollbar pb-6 snap-x">
+<!-- CPU Item 1 -->
+<div class="flex-none w-[280px] snap-start group bg-surface-container-high p-1">
+<div class="bg-background p-4 flex flex-col h-full border border-transparent group-hover:border-[#3cd7ff]/30 transition-all">
+<div class="h-40 bg-[#171f33] flex items-center justify-center mb-4">
+<img class="h-32 w-auto object-contain" data-alt="CPU" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRrmSCs6Fdf-qKmcxjGNAanJ8vj2wMGlJ-RTr2t0_Urzhye5EoKgXwcZvlqw7tMS2aFYFaYN0cRw8w4gAQZJnEAMvUTimhSuWDRdma-1qW8iLHfz7YB-pzCaT4quuPROubowP9msb-vjMhWLYXRICcgdxLovznhxNXRMfFotGpskbpYIPESldHypMK3yib3rKimML1h9Xyo1DECLzdEk9Z_3-BhDJTq6d94wVZehIiUpTi31JLN3_5w8__JCuVHpSfQk8TNSqj9S1R"/>
+</div>
+<h4 class="font-headline font-bold text-sm h-10 line-clamp-2">CORE-X 9950X PRO MAX</h4>
+<div class="flex flex-wrap gap-1 mt-2">
+<span class="text-[8px] bg-surface-container-highest px-1.5 py-0.5 font-bold">16C/32T</span>
+<span class="text-[8px] bg-surface-container-highest px-1.5 py-0.5 font-bold">5.4GHZ</span>
+</div>
+<div class="mt-6 flex justify-between items-center">
+<span class="text-[#3cd7ff] font-bold">$699.00</span>
+<button class="text-[10px] font-bold uppercase tracking-widest bg-[#3cd7ff] text-[#003642] px-3 py-1.5">Add</button>
+</div>
+</div>
+</div>
+<!-- Repeated CPU items -->
+<div class="flex-none w-[280px] snap-start group bg-surface-container-high p-1">
+<div class="bg-background p-4 flex flex-col h-full border border-transparent group-hover:border-[#3cd7ff]/30 transition-all">
+<div class="h-40 bg-[#171f33] flex items-center justify-center mb-4">
+<img class="h-32 w-auto object-contain" data-alt="CPU" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGhqPlCVFZ0fXDANUWS0e9YZ0JC4QTWBpW-HdJa3Za6vNaB4OivqSzg_Bg8RrItmSVX4zuNvAcQqiXXUpo6sT1m6jMhqU6JLo0UdeCMCItAl_P9N1-FdB6aFWiUNY6YR5cupZsu6hwXQaBlwwqH_g5wD6UDDtii9w7Ik0HwKMkdFWvEkOksUuHuQChfAEC6DdN2fjhh6PfPIlWx3xakRlj4HsGKLaWm1reIxpYAL_CWKdE2uC1JjX_J-laLsyrLZ8uUdD_d-fBpxBL"/>
+</div>
+<h4 class="font-headline font-bold text-sm h-10 line-clamp-2">CORE-X 9900X PRECISION</h4>
+<div class="flex flex-wrap gap-1 mt-2">
+<span class="text-[8px] bg-surface-container-highest px-1.5 py-0.5 font-bold">12C/24T</span>
+<span class="text-[8px] bg-surface-container-highest px-1.5 py-0.5 font-bold">5.2GHZ</span>
+</div>
+<div class="mt-6 flex justify-between items-center">
+<span class="text-[#3cd7ff] font-bold">$549.00</span>
+<button class="text-[10px] font-bold uppercase tracking-widest bg-[#3cd7ff] text-[#003642] px-3 py-1.5">Add</button>
+</div>
+</div>
+</div>
+<!-- Additional placeholder items -->
+<div class="flex-none w-[280px] snap-start group bg-surface-container-high p-1 opacity-70 hover:opacity-100">
+<div class="bg-background p-4 flex flex-col h-full border border-transparent transition-all">
+<div class="h-40 bg-[#171f33] flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-4xl text-outline-variant">memory</span>
+</div>
+<h4 class="font-headline font-bold text-sm h-10 line-clamp-2">CORE-X 7700X BALANCED</h4>
+<div class="mt-6 flex justify-between items-center">
+<span class="text-[#3cd7ff] font-bold">$349.00</span>
+<button class="text-[10px] font-bold uppercase tracking-widest bg-[#3cd7ff] text-[#003642] px-3 py-1.5">Add</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 3: CARD ĐỒ HỌA - VGA -->
+<section class="py-16 px-8 md:px-12">
+<div class="max-w-[1920px] mx-auto">
+<div class="flex justify-between items-end mb-8 border-l-4 border-tertiary pl-6">
+<div>
+<h2 class="font-headline text-3xl font-bold tracking-tight uppercase">CARD ĐỒ HỌA - <span class="text-tertiary">VGA</span></h2>
+<p class="text-on-surface-variant text-xs font-bold tracking-[0.2em] mt-1">VISUAL_ACCELERATORS</p>
+</div>
+<a class="text-xs font-bold tracking-widest text-tertiary flex items-center group" href="#">SEE ALL <span class="material-symbols-outlined text-sm ml-2 group-hover:translate-x-1 transition-transform">arrow_forward</span></a>
+</div>
+<div class="flex space-x-6 overflow-x-auto hide-scrollbar pb-6 snap-x">
+<!-- VGA Item -->
+<div class="flex-none w-[350px] snap-start relative group">
+<div class="absolute inset-0 bg-tertiary/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="bg-surface-container border border-outline-variant/30 p-6 flex flex-col gap-4">
+<div class="h-44 overflow-hidden">
+<img class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700" data-alt="VGA" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbcVYK2N6TiNnM7QoDaEGb5ddShuJlLWaMJauxE1HGoGkOjK-BZiNiKvcKXIMJCtVxrStiAfaR_WTHpAubtGQrx5d12r3ruiOMx3ViPmQdPclBkirDY2m9dYh-_cbrTNkZPeBdwcrXY2TBvm5uFGjtUO8cWDPDNOXjJjvGyhcxn6njHe0J5TauaY1oADfuVavxGl3cWHn8q5hYdwNK9YFVgrrPhlfm1QgRY-V20NKSwx7Zzhf8JhLrZc-6rbpgll8umRIcSZ7b-nBf"/>
+</div>
+<div>
+<h4 class="font-headline text-xl font-bold">NEBULA TITAN OC</h4>
+<p class="text-xs text-on-surface-variant mt-1">RTX 5090 / 24GB VRAM / OC EDITION</p>
+</div>
+<div class="flex justify-between items-center mt-4">
+<span class="text-2xl font-bold font-headline text-tertiary">$1,999.00</span>
+<button class="bg-white/5 border border-tertiary/20 px-4 py-2 text-[10px] font-black uppercase tracking-[0.2em] hover:bg-tertiary hover:text-on-tertiary transition-all">CONFIGURE</button>
+</div>
+</div>
+</div>
+<!-- VGA Item 2 -->
+<div class="flex-none w-[350px] snap-start relative group">
+<div class="bg-surface-container border border-outline-variant/30 p-6 flex flex-col gap-4">
+<div class="h-44 overflow-hidden bg-black/20">
+<img class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700" data-alt="VGA" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfh8_o71ck-VzO_ZLS7SQxk0aOKG8WruzoudiGCMZfeGUwWHeP0q7bZTh44Eq_rkF8y-9VsSBvXWtO7sNJ8yKPi1I9aNqaknUYxVL61mTAKci4d09_uvgLUo_rgXhdDsQMni-z4BqfyR1VkFHFFFYKrdz4bqv9PI7-0swy4a0owAQqh3_OMAXmVe9hGuJmiRgD2jZ1lo-ww8c4DJPHg8572kZoQJrufrrfvaJ9ejw4_KIWW51WfNdLGK-EJqfpI2PrAzkhqC5PwlAe"/>
+</div>
+<div>
+<h4 class="font-headline text-xl font-bold">NEBULA STRATUS</h4>
+<p class="text-xs text-on-surface-variant mt-1">RTX 5080 / 16GB VRAM / SILENT MOD</p>
+</div>
+<div class="flex justify-between items-center mt-4">
+<span class="text-2xl font-bold font-headline text-tertiary">$1,199.00</span>
+<button class="bg-white/5 border border-tertiary/20 px-4 py-2 text-[10px] font-black uppercase tracking-[0.2em] hover:bg-tertiary hover:text-on-tertiary transition-all">CONFIGURE</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 4: BO MẠCH CHỦ - MAINBOARD -->
+<section class="py-16 px-8 md:px-12 bg-surface-container-low/50">
+<div class="max-w-[1920px] mx-auto">
+<div class="flex justify-between items-end mb-8 border-l-4 border-secondary pl-6">
+<div>
+<h2 class="font-headline text-3xl font-bold tracking-tight uppercase">BO MẠCH CHỦ - <span class="text-secondary">MAINBOARD</span></h2>
+<p class="text-on-surface-variant text-xs font-bold tracking-[0.2em] mt-1">SYSTEM_BACKBONES</p>
+</div>
+<a class="text-xs font-bold tracking-widest text-secondary flex items-center group" href="#">SEE ALL <span class="material-symbols-outlined text-sm ml-2 group-hover:translate-x-1 transition-transform">arrow_forward</span></a>
+</div>
+<div class="flex space-x-6 overflow-x-auto hide-scrollbar pb-6 snap-x">
+<!-- Mainboard Item 1 -->
+<div class="flex-none w-[300px] snap-start bg-background border border-outline-variant/10 hover:border-secondary/50 transition-colors p-6 group">
+<div class="aspect-square bg-surface-container rounded-sm mb-6 flex items-center justify-center p-4">
+<img class="w-full h-full object-contain group-hover:rotate-3 transition-transform" data-alt="Mainboard" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_x8LLiYrxAASO2jy-AaXX0td1ZIsJ-kXdmD0EtnWekICzYNoaM6jpdDfNMM1r7tn2y9kNMjStnf8-HLHvefk6P_Kwsf5wMFosCh9PdkU2mO3QrTshlrDg8hUH8zHjJK6mL0M65PxEjxb52z_BBcHggtMAQthJx_ZuR0wcso2pE71Jwx5TKZng6HZJRnZTMRsWqVqLu3qMHX6vlzolwDpUcLKgOj2_5rLseQg2GTQ-Hlq3_jAdVVE1ooAoWf1eE5Tl5VHehUI8Vw62"/>
+</div>
+<h4 class="font-headline font-bold text-lg">KINETIC ALPHA-X</h4>
+<p class="text-[10px] text-on-surface-variant tracking-wider uppercase mt-1">X870E // AM5 SOCKET</p>
+<div class="mt-8 flex justify-between items-baseline">
+<span class="text-2xl font-bold font-headline text-secondary">$449.00</span>
+<button class="text-secondary border-b border-secondary/0 hover:border-secondary transition-all font-bold text-[10px] uppercase tracking-widest">Details</button>
+</div>
+</div>
+<!-- Mainboard Item 2 -->
+<div class="flex-none w-[300px] snap-start bg-background border border-outline-variant/10 hover:border-secondary/50 transition-colors p-6 group">
+<div class="aspect-square bg-surface-container rounded-sm mb-6 flex items-center justify-center p-4">
+<img class="w-full h-full object-contain group-hover:rotate-3 transition-transform" data-alt="Mainboard" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_x8LLiYrxAASO2jy-AaXX0td1ZIsJ-kXdmD0EtnWekICzYNoaM6jpdDfNMM1r7tn2y9kNMjStnf8-HLHvefk6P_Kwsf5wMFosCh9PdkU2mO3QrTshlrDg8hUH8zHjJK6mL0M65PxEjxb52z_BBcHggtMAQthJx_ZuR0wcso2pE71Jwx5TKZng6HZJRnZTMRsWqVqLu3qMHX6vlzolwDpUcLKgOj2_5rLseQg2GTQ-Hlq3_jAdVVE1ooAoWf1eE5Tl5VHehUI8Vw62"/>
+</div>
+<h4 class="font-headline font-bold text-lg">KINETIC BETA-S</h4>
+<p class="text-[10px] text-on-surface-variant tracking-wider uppercase mt-1">B650 // AM5 SOCKET</p>
+<div class="mt-8 flex justify-between items-baseline">
+<span class="text-2xl font-bold font-headline text-secondary">$219.00</span>
+<button class="text-secondary border-b border-secondary/0 hover:border-secondary transition-all font-bold text-[10px] uppercase tracking-widest">Details</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Daily Cycles Section (Flash Deals) -->
+<section class="py-24 px-12 max-w-7xl mx-auto">
+<div class="bg-surface-container-lowest border border-primary/20 p-12 relative overflow-hidden">
+<div class="absolute top-0 right-0 p-8">
+<span class="text-xs font-mono text-outline uppercase tracking-widest">Cycle ID: 884-XJ</span>
+</div>
+<div class="flex flex-col md:flex-row items-center gap-16">
+<div class="flex-1">
+<h2 class="font-headline text-5xl font-black italic tracking-tighter mb-4">DAILY CYCLES</h2>
+<p class="text-on-surface-variant text-lg mb-8">Hardware resets every 24 hours. Once the timer hits zero, these configurations are archived.</p>
+<div class="flex space-x-6 mb-12">
+<div class="text-center">
+<div class="w-20 h-20 bg-surface-container flex items-center justify-center font-headline text-4xl font-bold text-primary">08</div>
+<span class="text-[10px] tracking-[0.2em] font-bold text-outline mt-2 block">HOURS</span>
+</div>
+<div class="text-center">
+<div class="w-20 h-20 bg-surface-container flex items-center justify-center font-headline text-4xl font-bold text-primary">42</div>
+<span class="text-[10px] tracking-[0.2em] font-bold text-outline mt-2 block">MINS</span>
+</div>
+<div class="text-center">
+<div class="w-20 h-20 bg-surface-container flex items-center justify-center font-headline text-4xl font-bold text-primary">15</div>
+<span class="text-[10px] tracking-[0.2em] font-bold text-outline mt-2 block">SECS</span>
+</div>
+</div>
+<button class="bg-white text-slate-950 px-12 py-4 font-headline font-black text-sm tracking-[0.2em] hover:bg-primary transition-colors">
+                            SYNC NOW
+                        </button>
+</div>
+<div class="flex-1 w-full">
+<div class="bg-surface-container-high p-8 flex items-center gap-8 group">
+<div class="w-32 h-32 bg-slate-950 flex-shrink-0">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all" data-alt="Two NVMe SSD drives" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfDFctgEDiLQ0O3X3WcCNyO7nNagn431bn67lqvxhkYgPpzXzSS-Ca0bK2q8hKdwOraxByRPBjRaxzDjZsBkoDH-pvlpKa6WtvXuNHirgSk6vvHyKHZY9ZIbC-AJDu9WrUVI8zppwkxnL7LWzuhtY3zaKgDonPKD-Rnkn95uUFIJemcpoUdURc9ih7gNgH-46lVWVdlxfpY7vhfTrTZMaw_8Oq5Hv9-qKK8z321sql6fUwY0xqQRrKTdu8AG8nCawSgjzXxEF-OkFn"/>
+</div>
+<div>
+<h4 class="font-headline text-xl font-bold">2TB HYPERION NVME</h4>
+<p class="text-primary font-headline text-2xl font-bold">$129.00 <span class="text-on-surface-variant text-sm line-through ml-2">$189.00</span></p>
+<div class="mt-4 h-1 w-full bg-surface-container">
+<div class="h-full bg-primary w-[85%]"></div>
+</div>
+<p class="text-[10px] font-bold text-on-surface-variant mt-2">85% STOCK ALLOCATED</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#0b1326] w-full border-t border-slate-800/30">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-12 py-16 max-w-[1920px] mx-auto">
+<div class="col-span-1 md:col-span-1">
+<div class="text-lg font-bold text-slate-200 font-headline mb-6">KINETIC_CORE</div>
+<p class="text-slate-500 font-['Inter'] uppercase tracking-widest text-[10px] font-bold leading-loose">
+                    Defining the boundary between silicon and soul. Our hardware is engineered for those who demand absolute performance.
+                </p>
+</div>
+<div class="flex flex-col space-y-4">
+<h5 class="text-[#00d4ff] font-['Inter'] uppercase tracking-widest text-[10px] font-bold">Navigation</h5>
+<a class="text-slate-600 hover:text-slate-300 transition-colors font-['Inter'] uppercase tracking-widest text-[10px] font-bold" href="#">Processors</a>
+<a class="text-slate-600 hover:text-slate-300 transition-colors font-['Inter'] uppercase tracking-widest text-[10px] font-bold" href="#">Graphics Cards</a>
+<a class="text-slate-600 hover:text-slate-300 transition-colors font-['Inter'] uppercase tracking-widest text-[10px] font-bold" href="#">System Configurator</a>
+</div>
+<div class="flex flex-col space-y-4">
+<h5 class="text-[#00d4ff] font-['Inter'] uppercase tracking-widest text-[10px] font-bold">Support Shell</h5>
+<a class="text-slate-600 hover:text-slate-300 transition-colors font-['Inter'] uppercase tracking-widest text-[10px] font-bold" href="#">Technical Support</a>
+<a class="text-slate-600 hover:text-slate-300 transition-colors font-['Inter'] uppercase tracking-widest text-[10px] font-bold" href="#">Warranty Policy</a>
+<a class="text-slate-600 hover:text-slate-300 transition-colors font-['Inter'] uppercase tracking-widest text-[10px] font-bold" href="#">Refurbished Hub</a>
+</div>
+<div class="flex flex-col space-y-4">
+<h5 class="text-[#00d4ff] font-['Inter'] uppercase tracking-widest text-[10px] font-bold">Connect</h5>
+<div class="flex space-x-4">
+<span class="material-symbols-outlined text-slate-600 hover:text-[#00d4ff] cursor-pointer transition-colors">terminal</span>
+<span class="material-symbols-outlined text-slate-600 hover:text-[#00d4ff] cursor-pointer transition-colors">memory</span>
+<span class="material-symbols-outlined text-slate-600 hover:text-[#00d4ff] cursor-pointer transition-colors">hub</span>
+</div>
+<div class="mt-4">
+<input class="bg-slate-900 border-none text-[10px] p-3 w-full tracking-[0.2em] focus:ring-1 focus:ring-[#00d4ff] outline-none" placeholder="JOIN THE NETWORK" type="email"/>
+</div>
+</div>
+</div>
+<div class="px-12 py-8 border-t border-slate-900 flex flex-col md:flex-row justify-between items-center bg-gradient-to-t from-[#171f33] to-[#0b1326]">
+<span class="font-['Inter'] text-xs tracking-tight text-slate-500">© 2024 COBALT CORE PRECISION. ENGINEERED FOR VELOCITY.</span>
+<div class="flex space-x-8 mt-4 md:mt-0">
+<a class="text-slate-600 hover:text-slate-300 transition-colors font-['Inter'] uppercase tracking-widest text-[10px] font-bold" href="#">Privacy Schematic</a>
+<a class="text-slate-600 hover:text-slate-300 transition-colors font-['Inter'] uppercase tracking-widest text-[10px] font-bold" href="#">User Agreement</a>
+</div>
+</div>
+</footer>
+</body></html>
