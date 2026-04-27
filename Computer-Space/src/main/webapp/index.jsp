@@ -259,109 +259,45 @@
 </div>
 </div>
 </section>
-<!-- SECTION 0: ƯU ĐÃI ĐẶC BIỆT - SPECIAL OFFERS -->
-<section class="py-16 px-8 md:px-12 bg-surface-container-lowest">
-<div class="max-w-[1920px] mx-auto">
-<div class="flex justify-between items-end mb-8 border-l-4 border-primary pl-6">
+<!-- Featured Products: Bento Style -->
+<section class="max-w-screen-2xl mx-auto px-6 mb-16">
+<div class="flex justify-between items-end mb-8">
 <div>
-<h2 class="font-headline text-3xl font-bold tracking-tight uppercase">ƯU ĐÃI <span class="text-primary">ĐẶC BIỆT</span></h2>
+<h2 class="text-3xl font-bold font-headline tracking-tight uppercase text-white">Ưu đãi đặc biệt</h2>
 </div>
-<a class="text-xs font-bold tracking-widest text-primary flex items-center group" href="#">SEE ALL <span class="material-symbols-outlined text-sm ml-2 group-hover:translate-x-1 transition-transform">arrow_forward</span></a>
 </div>
-<div class="flex space-x-6 overflow-x-auto hide-scrollbar pb-6 snap-x">
-<!-- Discounted Product 1 -->
-<a class="flex-none w-[320px] snap-start group relative bg-surface-container-low border border-outline-variant/20 hover:border-primary/50 transition-all duration-300" href='#'>
-<div class="absolute top-4 left-4 z-10 bg-error text-on-error px-2 py-1 font-headline font-bold text-xs">
-                            -30%
-                        </div>
-<div class="h-48 bg-[#060e20] flex items-center justify-center p-6 overflow-hidden">
-<img class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500" data-alt="Discounted Product" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfDFctgEDiLQ0O3X3WcCNyO7nNagn431bn67lqvxhkYgPpzXzSS-Ca0bK2q8hKdwOraxByRPBjRaxzDjZsBkoDH-pvlpKa6WtvXuNHirgSk6vvHyKHZY9ZIbC-AJDu9WrUVI8zppwkxnL7LWzuhtY3zaKgDonPKD-Rnkn95uUFIJemcpoUdURc9ih7gNgH-46lVWVdlxfpY7vhfTrTZMaw_8Oq5Hv9-qKK8z321sql6fUwY0xqQRrKTdu8AG8nCawSgjzXxEF-OkFn"/>
-</div>
-<div class="p-6">
-<span class="text-[10px] font-bold text-primary tracking-widest uppercase">STORAGE_ARRAY</span>
-<h4 class="font-headline text-lg font-bold mt-1 line-clamp-1">2TB HYPERION NVME</h4>
-<p class="text-xs text-on-surface-variant mt-2 mb-4">Gen 5 / 7500 MB/s Read</p>
-<div class="flex justify-between items-center mt-auto border-t border-outline-variant/10 pt-4">
-<div class="flex flex-col">
-<span class="text-xs text-on-surface-variant line-through">$189.00</span>
-<span class="font-headline text-xl font-bold text-primary">$129.00</span>
-</div>
-<button class="p-2 bg-primary/10 text-primary hover:bg-primary hover:text-on-primary transition-all">
-<span class="material-symbols-outlined text-sm">add_shopping_cart</span>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+<!-- Large Feature Card -->
+<div class="md:col-span-2 md:row-span-2 bg-surface-container-low rounded-lg p-8 relative overflow-hidden group">
+<div class="relative z-10">
+<span class="bg-primary/10 text-primary text-[10px] px-2 py-1 uppercase font-bold tracking-widest mb-4 inline-block">Khuyến mãi</span>
+<h3 class="text-3xl font-headline font-bold text-white mb-2">Ưu đãi Khách hàng mới</h3>
+<p class="text-on-surface-variant text-sm mb-6 max-w-xs">Dành cho những người mua lần đầu tại Website</p>
+<button class="flex items-center gap-2 group/btn">
+<span class="text-xs uppercase font-bold tracking-widest border-b border-primary pb-1">Xem chi tiết</span>
+<span class="material-symbols-outlined text-sm group-hover/btn:translate-x-1 transition-transform">arrow_forward</span>
 </button>
 </div>
+<img class="absolute -right-10 bottom-0 w-80 object-contain group-hover:-translate-y-4 transition-transform duration-700" data-alt="premium white computer case with tempered glass side panel and complex internal cabling in a minimalist tech setup" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjv8SVHSwyLO7BTInz2ceJIM0wEyZ3nleJ18f0m2bD4Gs2S7GDbbh8-ns1jTO6pFUzKl39c5Rd940L5VHk72BghrdRvhxAotgE-wFPhbgwoN3qV3AWP3Ush8ijEfgaFq0SOC0Un8sHlcyhvFdZLOC8r4X-S3C9de3Kfu5rcm26uylqWy54aTfwAiC0X_qYu6NeAtdXedK94MriBZAK8SVJzB9UEWE-etSnviNNFBt284iEvOh5_QnMjtfNs-PhO6hQXPCQEjr1sosT"/>
+</div>
+<!-- Secondary Cards -->
+<a class="bg-surface-container p-6 rounded-lg group" href="#">
+<div class="h-40 mb-4 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform" data-alt="close-up of colorful mechanical keyboard switches with neon rgb lighting in a dark workspace" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJhTOcgl4FmVye_n7Hzry_AVVJp0YQpu2lwbqmximiW34royuHE_7Pwh0Gl01qGdhaQfYU0E9JT_dmGoSwipe2fQpF7tV9oyEOBYVc2ks_ZRvxo6gGRddtIDQwZ5xLnDXXPbRhkEWbaK5UOkFb8e3F1eo6Nt-NxFanQVjwHtPQWUMXBQtK1BNJAxpaX6s8bhO5ZYWCaPTI6tlIBgkB3aO7vewEGhuM0BV6lERUYLz23oUlRhwl72Om87nIOHaJBlHvneBAvXmPpagK"/>
+</div>
+<h4 class="font-headline font-bold text-white text-lg">Ưu đãi mùa tựu trường</h4>
+<div class="flex justify-between items-center mt-4">
 </div>
 </a>
-<!-- Discounted Product 2 -->
-<a class="flex-none w-[320px] snap-start group relative bg-surface-container-low border border-outline-variant/20 hover:border-primary/50 transition-all duration-300" href='#'>
-<div class="absolute top-4 left-4 z-10 bg-error text-on-error px-2 py-1 font-headline font-bold text-xs">
-                            -15%
-                        </div>
-<div class="h-48 bg-[#060e20] flex items-center justify-center p-6 overflow-hidden">
-<img class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500" data-alt="Discounted Product" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRrmSCs6Fdf-qKmcxjGNAanJ8vj2wMGlJ-RTr2t0_Urzhye5EoKgXwcZvlqw7tMS2aFYFaYN0cRw8w4gAQZJnEAMvUTimhSuWDRdma-1qW8iLHfz7YB-pzCaT4quuPROubowP9msb-vjMhWLYXRICcgdxLovznhxNXRMfFotGpskbpYIPESldHypMK3yib3rKimML1h9Xyo1DECLzdEk9Z_3-BhDJTq6d94wVZehIiUpTi31JLN3_5w8__JCuVHpSfQk8TNSqj9S1R"/>
+<!-- Third card -->
+<a class="bg-surface-container p-6 rounded-lg group" href="#">
+<div class="h-40 mb-4 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform" data-alt="modern curved gaming monitor displaying a vibrant cyberpunk cityscape with neon lights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgHu8QyoHzx2bj78tB6gH7wdBHz6OOX-SmmnviymX3XdAZufB4xBD0CsNvOOt0VAANU66H9irQuatoaxjE7QPea88n0xsfzzOUGiYJ9JomHg66eo2DVNFsWyFhPrjOGrg7qNJVx4NyBROjEiLEkgkObVe_cXHY96hryMPTYPt7GUkyPE5pM_lf-PtiYFEA6AFsnJYffqaHQm8_-nDCDHLY7UMAyHI_OzpfqzV-N1uVBn5JQ26LSFzkkyb4sD2UL2hsFwoOEitKoM2D"/>
 </div>
-<div class="p-6">
-<span class="text-[10px] font-bold text-primary tracking-widest uppercase">PRECISION_CORE</span>
-<h4 class="font-headline text-lg font-bold mt-1 line-clamp-1">CORE-X 9700X</h4>
-<p class="text-xs text-on-surface-variant mt-2 mb-4">8 Cores / 5.5 GHz / 65W TDP</p>
-<div class="flex justify-between items-center mt-auto border-t border-outline-variant/10 pt-4">
-<div class="flex flex-col">
-<span class="text-xs text-on-surface-variant line-through">$359.00</span>
-<span class="font-headline text-xl font-bold text-primary">$305.00</span>
-</div>
-<button class="p-2 bg-primary/10 text-primary hover:bg-primary hover:text-on-primary transition-all">
-<span class="material-symbols-outlined text-sm">add_shopping_cart</span>
-</button>
-</div>
+<h4 class="font-headline font-bold text-white text-lg">Ưu đãi</h4>
+<div class="flex justify-between items-center mt-4">
 </div>
 </a>
-<!-- Discounted Product 3 -->
-<a class="flex-none w-[320px] snap-start group relative bg-surface-container-low border border-outline-variant/20 hover:border-primary/50 transition-all duration-300" href='#'>
-<div class="absolute top-4 left-4 z-10 bg-error text-on-error px-2 py-1 font-headline font-bold text-xs">
-                            -20%
-                        </div>
-<div class="h-48 bg-[#060e20] flex items-center justify-center p-6 overflow-hidden">
-<img class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500" data-alt="Discounted Product" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_x8LLiYrxAASO2jy-AaXX0td1ZIsJ-kXdmD0EtnWekICzYNoaM6jpdDfNMM1r7tn2y9kNMjStnf8-HLHvefk6P_Kwsf5wMFosCh9PdkU2mO3QrTshlrDg8hUH8zHjJK6mL0M65PxEjxb52z_BBcHggtMAQthJx_ZuR0wcso2pE71Jwx5TKZng6HZJRnZTMRsWqVqLu3qMHX6vlzolwDpUcLKgOj2_5rLseQg2GTQ-Hlq3_jAdVVE1ooAoWf1eE5Tl5VHehUI8Vw62"/>
-</div>
-<div class="p-6">
-<span class="text-[10px] font-bold text-primary tracking-widest uppercase">BASE_STATION</span>
-<h4 class="font-headline text-lg font-bold mt-1 line-clamp-1">KINETIC BETA-S</h4>
-<p class="text-xs text-on-surface-variant mt-2 mb-4">B650 // AM5 SOCKET</p>
-<div class="flex justify-between items-center mt-auto border-t border-outline-variant/10 pt-4">
-<div class="flex flex-col">
-<span class="text-xs text-on-surface-variant line-through">$219.00</span>
-<span class="font-headline text-xl font-bold text-primary">$175.00</span>
-</div>
-<button class="p-2 bg-primary/10 text-primary hover:bg-primary hover:text-on-primary transition-all">
-<span class="material-symbols-outlined text-sm">add_shopping_cart</span>
-</button>
-</div>
-</div>
-</a>
-<!-- Discounted Product 4 -->
-<a class="flex-none w-[320px] snap-start group relative bg-surface-container-low border border-outline-variant/20 hover:border-primary/50 transition-all duration-300" href='#'>
-<div class="absolute top-4 left-4 z-10 bg-error text-on-error px-2 py-1 font-headline font-bold text-xs">
-                            -25%
-                        </div>
-<div class="h-48 bg-[#060e20] flex items-center justify-center p-6 overflow-hidden">
-<img class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500" data-alt="Discounted Product" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfh8_o71ck-VzO_ZLS7SQxk0aOKG8WruzoudiGCMZfeGUwWHeP0q7bZTh44Eq_rkF8y-9VsSBvXWtO7sNJ8yKPi1I9aNqaknUYxVL61mTAKci4d09_uvgLUo_rgXhdDsQMni-z4BqfyR1VkFHFFFYKrdz4bqv9PI7-0swy4a0owAQqh3_OMAXmVe9hGuJmiRgD2jZ1lo-ww8c4DJPHg8572kZoQJrufrrfvaJ9ejw4_KIWW51WfNdLGK-EJqfpI2PrAzkhqC5PwlAe"/>
-</div>
-<div class="p-6">
-<span class="text-[10px] font-bold text-primary tracking-widest uppercase">RENDER_ENGINE</span>
-<h4 class="font-headline text-lg font-bold mt-1 line-clamp-1">NEBULA STRATUS</h4>
-<p class="text-xs text-on-surface-variant mt-2 mb-4">RTX 5080 / 16GB VRAM</p>
-<div class="flex justify-between items-center mt-auto border-t border-outline-variant/10 pt-4">
-<div class="flex flex-col">
-<span class="text-xs text-on-surface-variant line-through">$1,199.00</span>
-<span class="font-headline text-xl font-bold text-primary">$899.00</span>
-</div>
-<button class="p-2 bg-primary/10 text-primary hover:bg-primary hover:text-on-primary transition-all">
-<span class="material-symbols-outlined text-sm">add_shopping_cart</span>
-</button>
-</div>
-</div>
-</a>
-</div>
 </div>
 </section>
 <!-- SECTION 1: SẢN PHẨM NỔI BẬT -->
@@ -371,7 +307,7 @@
 <div>
 <h2 class="font-headline text-3xl font-bold tracking-tight uppercase">SẢN PHẨM <span class="text-primary">NỔI BẬT</span></h2>
 </div>
-<a class="text-xs font-bold tracking-widest text-primary flex items-center group" href="#">SEE ALL <span class="material-symbols-outlined text-sm ml-2 group-hover:translate-x-1 transition-transform">arrow_forward</span></a>
+<a class="text-xs font-bold tracking-widest text-primary flex items-center group" href="#">Xem tất cả <span class="material-symbols-outlined text-sm ml-2 group-hover:translate-x-1 transition-transform">arrow_forward</span></a>
 </div>
 <div class="flex space-x-6 overflow-x-auto hide-scrollbar pb-6 snap-x">
 <!-- Sản phẩm 1 -->
@@ -499,7 +435,7 @@
 <div>
 <h2 class="font-headline text-3xl font-bold tracking-tight uppercase">BỘ VI XỬ LÝ - <span class="text-[#3cd7ff]">CPU</span></h2>
 </div>
-<a class="text-xs font-bold tracking-widest text-[#3cd7ff] flex items-center group" href="#">SEE ALL <span class="material-symbols-outlined text-sm ml-2 group-hover:translate-x-1 transition-transform">arrow_forward</span></a>
+<a class="text-xs font-bold tracking-widest text-[#3cd7ff] flex items-center group" href="#">Xem tất cả <span class="material-symbols-outlined text-sm ml-2 group-hover:translate-x-1 transition-transform">arrow_forward</span></a>
 </div>
 <div class="flex space-x-6 overflow-x-auto hide-scrollbar pb-6 snap-x">
 <!-- CPU 1 -->

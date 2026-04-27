@@ -333,10 +333,20 @@
 <!-- Tổng tiền -->
 <aside class="lg:col-span-4 sticky top-32">
 <div class="bg-surface-container-high rounded-xl p-8 space-y-8 shadow-2xl relative overflow-hidden">
+<!-- Promo Code Field -->
+<div class="pt-4">
+<label class="block text-[15px] font-bold text-primary tracking-widest uppercase mb-2">Mã giảm giá</label>
+<div class="flex gap-2">
+<input class="flex-grow bg-surface-container-lowest border border-outline-variant/30 rounded px-4 py-2 text-xs font-mono focus:border-primary/50 text-on-surface placeholder:text-on-surface-variant/40" placeholder="Nhập mã" type="text"/>
+<button class="bg-surface-container-highest px-4 py-2 rounded text-[15px] font-bold hover:bg-surface-bright transition-colors uppercase">áp dụng</button>
+</div>
+</div>
 <div class="pt-6 border-t border-surface-variant">
+
 <div class="flex justify-between items-end mb-8">
+
 <div>
-<div class="text-[10px] font-bold text-primary tracking-widest uppercase">Total System Cost</div>
+<div class="text-[10px] font-bold text-primary tracking-widest uppercase">Tổng cộng</div>
 <div class="text-4xl font-black font-headline text-on-surface">$3,334.48</div>
 </div>
 </div>
@@ -345,6 +355,34 @@
 <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">shopping_cart</span>
                                 Đặt hàng ngay
                             </button>
+</div>
+</div>
+<!-- Payment Methods -->
+<div class="space-y-4">
+<label class="block text-[10px] font-bold text-primary tracking-widest uppercase">Hình thức thanh tuyến</label>
+<div class="grid grid-cols-1 gap-3">
+<label class="flex items-center gap-4 p-4 rounded-lg bg-surface-container-lowest border border-outline-variant/30 cursor-pointer hover:bg-surface-container transition-all group has-[:checked]:border-primary/50 has-[:checked]:bg-primary/5">
+<input checked="" class="hidden" name="payment" type="radio"/>
+<span class="material-symbols-outlined text-on-surface-variant group-has-[:checked]:text-primary">credit_card</span>
+<div class="flex-grow">
+<div class="text-xs font-bold uppercase tracking-wider">Thanh toán trực tuyến</div>
+<div class="text-[10px] text-on-surface-variant">mobile banking</div>
+</div>
+<div class="w-4 h-4 rounded-full border-2 border-outline-variant group-has-[:checked]:border-primary group-has-[:checked]:bg-primary relative flex items-center justify-center">
+<div class="w-1.5 h-1.5 rounded-full bg-on-primary opacity-0 group-has-[:checked]:opacity-100"></div>
+</div>
+</label>
+<label class="flex items-center gap-4 p-4 rounded-lg bg-surface-container-lowest border border-outline-variant/30 cursor-pointer hover:bg-surface-container transition-all group has-[:checked]:border-primary/50 has-[:checked]:bg-primary/5">
+<input class="hidden" name="payment" type="radio"/>
+<span class="material-symbols-outlined text-on-surface-variant group-has-[:checked]:text-primary">local_shipping</span>
+<div class="flex-grow">
+<div class="text-xs font-bold uppercase tracking-wider">Cash on Delivery (COD)</div>
+<div class="text-[10px] text-on-surface-variant">Verification upon arrival</div>
+</div>
+<div class="w-4 h-4 rounded-full border-2 border-outline-variant group-has-[:checked]:border-primary group-has-[:checked]:bg-primary relative flex items-center justify-center">
+<div class="w-1.5 h-1.5 rounded-full bg-on-primary opacity-0 group-has-[:checked]:opacity-100"></div>
+</div>
+</label>
 </div>
 </div>
 </div>

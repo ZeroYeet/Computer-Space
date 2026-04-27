@@ -360,6 +360,119 @@
 </div>
 </div>
 </section>
+<!-- Product Reviews & Ratings -->
+<section class="mt-32 space-y-12">
+<div class="flex items-center gap-4">
+<h3 class="text-2xl font-headline font-black tracking-widest uppercase text-white">Đánh giá</h3>
+<div class="h-px flex-1 bg-gradient-to-r from-outline-variant/50 to-transparent"></div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+<!-- Reviews Summary -->
+<div class="lg:col-span-4 space-y-8">
+<div class="bg-surface-container-low border border-outline-variant/20 p-8 rounded-sm">
+<div class="space-y-2 mb-8 text-center lg:text-left">
+<div class="flex items-baseline gap-2 justify-center lg:justify-start">
+<span class="text-6xl font-headline font-black text-white">4.8</span>
+<span class="text-on-surface-variant font-bold text-sm">/ 5.0</span>
+</div>
+<div class="flex gap-1 text-primary justify-center lg:justify-start">
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined">star_half</span>
+</div>
+<p class="text-[10px] text-on-surface-variant font-bold tracking-widest uppercase pt-2">Số lượt đánh giá: 100</p>
+</div>
+<div class="mt-10 pt-8 border-t border-outline-variant/10">
+<form class="space-y-4" onsubmit="event.preventDefault();">
+<div class="space-y-2">
+<p class="text-[10px] font-black text-primary tracking-[0.4em] uppercase font-label">Đánh giá</p>
+<div class="flex gap-1 star-rating text-slate-500">
+<span class="material-symbols-outlined active" onclick="this.parentElement.querySelectorAll('span').forEach((s,i)=&gt;i&lt;=0?s.classList.add('active'):s.classList.remove('active'))">star</span>
+<span class="material-symbols-outlined active" onclick="this.parentElement.querySelectorAll('span').forEach((s,i)=&gt;i&lt;=1?s.classList.add('active'):s.classList.remove('active'))">star</span>
+<span class="material-symbols-outlined active" onclick="this.parentElement.querySelectorAll('span').forEach((s,i)=&gt;i&lt;=2?s.classList.add('active'):s.classList.remove('active'))">star</span>
+<span class="material-symbols-outlined active" onclick="this.parentElement.querySelectorAll('span').forEach((s,i)=&gt;i&lt;=3?s.classList.add('active'):s.classList.remove('active'))">star</span>
+<span class="material-symbols-outlined" onclick="this.parentElement.querySelectorAll('span').forEach((s,i)=&gt;i&lt;=4?s.classList.add('active'):s.classList.remove('active'))">star</span>
+</div>
+</div>
+<div class="space-y-2">
+<p class="text-[10px] font-black text-primary tracking-[0.4em] uppercase font-label">Bình luận</p>
+<textarea class="w-full bg-[#060e20] border border-outline-variant/30 focus:border-primary/50 focus:ring-1 focus:ring-primary/50 rounded-sm text-[11px] text-white p-3 font-body min-h-[100px] placeholder:text-slate-600 transition-all" placeholder="Bình luận..."></textarea>
+</div>
+<button class="w-full border border-primary/50 text-primary hover:bg-primary/10 transition-all font-headline font-black py-4 text-xs tracking-[0.2em] uppercase glow-cyan group flex items-center justify-center gap-2">
+<span>Gửi</span>
+<span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">send</span>
+</button>
+</form>
+</div>
+</div>
+</div>
+<!-- Individual Reviews -->
+<div class="lg:col-span-8 space-y-6">
+<!-- Review 1 -->
+<div class="bg-surface-container-low border-l-2 border-primary p-8 space-y-4">
+<div class="flex justify-between items-start">
+<div class="space-y-1">
+<div class="flex items-center gap-3">
+<span class="text-[11px] font-black text-white tracking-widest font-headline">OPERATOR_TECH_HUNTER_99</span>
+</div>
+<div class="flex gap-0.5 text-primary">
+<span class="material-symbols-outlined text-sm fill-1">star</span>
+<span class="material-symbols-outlined text-sm fill-1">star</span>
+<span class="material-symbols-outlined text-sm fill-1">star</span>
+<span class="material-symbols-outlined text-sm fill-1">star</span>
+<span class="material-symbols-outlined text-sm fill-1">star</span>
+</div>
+</div>
+<span class="text-[10px] font-bold text-on-surface-variant font-label tracking-tighter uppercase">2024.03.15.09:42</span>
+</div>
+<div class="space-y-2">
+<p class="text-sm text-on-surface-variant font-body leading-relaxed max-w-3xl">The Quantum Titan X-1 has exceeded all thermal benchmarks during sustained 8K render cycles. Clock speeds remain rock solid at 2.85GHz even under peak vector loads. If you require zero-latency throughput for neural networking or high-fidelity simulation, this is the mandatory core.</p>
+</div>
+<!-- nút giữ lại hoặc xóa: khi đăng nhập bằng admin -->
+<div class="flex gap-4 pt-2">
+<button class="flex items-center gap-1.5 text-[9px] font-bold text-slate-500 hover:text-primary transition-colors uppercase font-label">
+<span class="material-symbols-outlined text-xs">thumb_up</span> Keep
+                            </button>
+<button class="flex items-center gap-1.5 text-[9px] font-bold text-slate-500 hover:text-error transition-colors uppercase font-label">
+<span class="material-symbols-outlined text-xs">report</span> Detele
+                            </button>
+</div>
+</div>
+<!-- Review 2 -->
+<div class="bg-surface-container-low border-l-2 border-outline-variant p-8 space-y-4">
+<div class="flex justify-between items-start">
+<div class="space-y-1">
+<div class="flex items-center gap-3">
+<span class="text-[11px] font-black text-white tracking-widest font-headline">OPERATOR_VOID_WALKER</span>
+</div>
+<div class="flex gap-0.5 text-primary">
+<span class="material-symbols-outlined text-sm fill-1">star</span>
+<span class="material-symbols-outlined text-sm fill-1">star</span>
+<span class="material-symbols-outlined text-sm fill-1">star</span>
+<span class="material-symbols-outlined text-sm fill-1">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+</div>
+</div>
+<span class="text-[10px] font-bold text-on-surface-variant font-label tracking-tighter uppercase">2024.02.28.18:12</span>
+</div>
+<div class="space-y-2">
+<p class="text-sm text-on-surface-variant font-body leading-relaxed max-w-3xl">Absolute beast of a card. 4 stars only because the 3.5 slot width is a massive constraint for smaller chassis builds. Ensure you have the Orbit-S Evo or similar high-volume air chambers. Once seated, the performance delta compared to the previous gen is astronomical.</p>
+</div>
+<!-- nút giữ lại hoặc xóa: khi đăng nhập bằng admin -->
+<div class="flex gap-4 pt-2">
+<button class="flex items-center gap-1.5 text-[9px] font-bold text-slate-500 hover:text-primary transition-colors uppercase font-label">
+<span class="material-symbols-outlined text-xs">thumb_up</span> Keep
+                            </button>
+<button class="flex items-center gap-1.5 text-[9px] font-bold text-slate-500 hover:text-error transition-colors uppercase font-label">
+<span class="material-symbols-outlined text-xs">report</span> Detele
+                            </button>
+</div>
+</div>
+</div>
+</div>
+</section>
 <!-- Sản phẩm tương tự -->
 <section class="mt-32 space-y-12">
 <div class="flex items-center gap-4">
